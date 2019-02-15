@@ -41,4 +41,4 @@ Simple mixin which extends boostrap to help you  solve the font size in bootstra
 
 
 ## video example
-[![Watch the video](http://files.rjwebdesign.cz/i2/20190215-145503.png)](http://files.rjwebdesign.cz/f/20190214-170535.mp4)
+[![Watch the video](http://files.rjwebdesign.cz/i2/20190215-145503.png)](http://files.rjwebdesign.cz/f/20190215-162324.mp4)
