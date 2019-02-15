@@ -1,9 +1,8 @@
 {
-  "name": "bootstrap4-font-size-helper",
+  "name": "@kcko/bootstrap4-font-size-helper",
   "version": "1.0.0",
   "dependencies": {
-    "bootstrap": "4.x",
-    "bootstrap4-font-size-helper": "^1.0.0"
+    "bootstrap": "4.x"
   },
   "description": "Simple mixin which extends boostrap to help you solve the font size in bootstrap defined breakpoints",
   "repository": {
@@ -12,15 +11,20 @@
   },
   "keywords": [
     "scss",
-    "bootstrap",
-    "4",
+    "bootstrap 4",
     "mixin",
-    "font-size"
+    "font size",
+    "utility",
+    "helper",
+    "responsive",
+    "breakpoints"
   ],
   "author": "Roman Janko <admin@rjwebdesign.cz> (https://rjwebdesign.cz)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Kcko/bootstrap4-font-size-helper/issues"
   },
-  "homepage": "https://github.com/Kcko/bootstrap4-font-size-helper#readme"
+  "homepage": "https://github.com/Kcko/bootstrap4-font-size-helper#readme",
+  "main": "index.js",
+  "devDependencies": {}
 }

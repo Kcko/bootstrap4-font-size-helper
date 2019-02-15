@@ -6,7 +6,7 @@ Simple mixin which extends boostrap to help you  solve the font size in bootstra
 - last update 15/02/2019
 
 ## how to install and use
-- Download package directly from github or install via ```npm install bootstrap4-font-size-helper``` or with yarn ```yarn add bootstrap4-font-size-helper```
+- Download package directly from github or install via ```npm install @kcko/bootstrap4-font-size-helper``` or with yarn ```yarn add @kcko/bootstrap4-font-size-helper```
 - import ```_core.scss``` to your project via command ```@import "core";```
 - generate required font sizes with ```@include bootstrap-font-size-maker();```
 
