@@ -2,7 +2,8 @@
   "name": "bootstrap4-font-size-helper",
   "version": "1.0.0",
   "dependencies": {
-    "bootstrap": "4.x"
+    "bootstrap": "4.x",
+    "bootstrap4-font-size-helper": "^1.0.0"
   },
   "description": "Simple mixin which extends boostrap to help you solve the font size in bootstrap defined breakpoints",
   "repository": {
