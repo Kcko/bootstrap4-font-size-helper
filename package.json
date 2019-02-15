@@ -25,6 +25,5 @@
     "url": "https://github.com/Kcko/bootstrap4-font-size-helper/issues"
   },
   "homepage": "https://github.com/Kcko/bootstrap4-font-size-helper#readme",
-  "main": "index.js",
   "devDependencies": {}
 }
