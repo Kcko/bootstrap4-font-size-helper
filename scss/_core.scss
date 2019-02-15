@@ -1,28 +1,51 @@
 @import 'helpers';
 
+
+$bootstrap-font-size-maker-defaults: (
+    'font-size-start': 0.1,
+    'font-size-end': 6,
+    'step': 0.1,
+    'classname': 'fs',
+    'separator': '_',
+    'font-unit': 'rem'
+) !default;
+
+
 /**
  * Bootstrap font size maker - utility for 
- * @param decimal|int $fontSizeStart
- * @param decimal|int $fontSizeEnd
+ * map params
+ * ---------------------------------------
+ * @param decimal|int $font-size-start
+ * @param decimal|int $font-size-end
  * @param decimal|int $step
+ * @param string $classname
  * @param string $separator
- * @param string $fontUnit
+ * @param string $font-unit
  */
- @mixin bootstrap-font-size-maker($fontSizeStart: 0.1,  $fontSizeEnd: 5, $step: 0.1, $separator: '_', $fontUnit: 'rem') 
+ @mixin bootstrap-font-size-maker($map: ()) 
  {
+    $map: map-merge($bootstrap-font-size-maker-defaults, $map);
+
+    $font-size-start: map-get($map, 'font-size-start');
+    $font-size-end: map-get($map, 'font-size-end');
+    $step: map-get($map, 'step');
+    $classname: map-get($map, 'classname');
+    $separator: map-get($map, 'separator');
+    $font-unit: map-get($map, 'font-unit');
+
      @each $breakpoint in map-keys($grid-breakpoints) 
      {
         @include media-breakpoint-up($breakpoint) 
         {
             $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
-            $i: $fontSizeStart;
-            @while $i <= $fontSizeEnd
+            $i: $font-size-start;
+            @while $i <= $font-size-end
             {
-               $iSafe: str-replace(to-string($i), '.', $separator);
+               $i-safe: str-replace(to-string($i), '.', $separator);
                
-               .fs#{$infix}-#{$iSafe}
+               .#{$classname}#{$infix}-#{$i-safe}
                {
-                   font-size: #{$i}#{$fontUnit};
+                   font-size: #{$i}#{$font-unit};
                }
                
                $i: $i + $step;

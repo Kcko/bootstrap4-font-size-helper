@@ -2,7 +2,7 @@
 
 Simple mixin which extends boostrap to help you  solve the font size in bootstrap defined breakpoints
 
-- version 1.0.0
+- version 2.0.0
 - last update 15/02/2019
 
 ## how to install and use
@@ -11,17 +11,48 @@ Simple mixin which extends boostrap to help you  solve the font size in bootstra
 - generate required font sizes with ```@include bootstrap-font-size-maker();```
 
 ## mixin option
- * @param decimal|int $fontSizeStart - size from
- * @param decimal|int $fontSizeEnd - size to
+ * map params
+ * @param decimal|int $font-size-start - size from
+ * @param decimal|int $font-size-end - size to
  * @param decimal|int $step - step between size from and size to
- * @param string $separator - class separator between whole number  and decimal number eg: "-", and your class will looks like this ```fs-1_4``` (```1.4rem```), can be ommited or unfilled (empty string)
- * @param string $fontUnit - type of unit (rem, px, em, or any ...), default rem like in BS
+ * @param string $classname - classname (prefix)
+ * @param string $separator - class separator between whole number  and decimal number eg: "_", and your class will looks like this ```fs-1_4``` (```1.4rem```), can be ommited or unfilled (empty string)
+ * @param string $font-unit - type of unit (rem, px, em, or any ...), default rem like in BS
 
+## default settings
+```
+'font-size-start': 0.1,
+'font-size-end': 6,
+'step': 0.1,
+'classname': 'fs',
+'separator': '_',
+'font-unit': 'rem'
+```
 
 ## example of use
-- ```@include bootstrap-font-size-maker(0.1, 5, 0.1, '');```
-- ```@include bootstrap-font-size-maker(1, 10, 0.5, '_');```
-- ```@include bootstrap-font-size-maker(1, 10, 0.2, '--', 'px');```
+- ```@include bootstrap-font-size-maker();``` will be rendered with default settings
+- ```@include bootstrap-font-size-maker(('classname': 'fs-helper')); ``` - will be rendered as ````.fs-helper-{breakpoint}-{size}````
+
+you can override all values from default settings
+```
+@include bootstrap-font-size-maker((
+'font-size-start': 1,
+'font-size-end': 10,
+'step': 0.5,
+'classname': 'helper-fs',
+'separator': '',
+'font-unit': 'px'
+));
+```
+
+or you can override only a part
+```
+@include bootstrap-font-size-maker((
+'font-size-start': 3,
+'font-unit': 'px',
+'separator': '---',
+));
+```
 
 ## in html
 ```html
@@ -36,7 +67,7 @@ Simple mixin which extends boostrap to help you  solve the font size in bootstra
   </div>
 </div>
 ```
-
+This example will work when we keep default settings :)
 
 
 
