@@ -23,5 +23,22 @@ Simple mixin which extends boostrap to help you  solve the font size in bootstra
 - ```@include bootstrap-font-size-maker(1, 10, 0.5, '_');```
 - ```@include bootstrap-font-size-maker(1, 10, 0.2, '--', 'px');```
 
+## in html
+```html
+<div class="fs-2 fs-sm-3 fs-md-4 fs-lg-5 fs-xl-6" style="padding: 1rem; margin: 1rem;">
+  <div style="color: red;" class="d-block d-sm-none">xs</div>
+  <div style="color: blue;" class="d-none d-sm-block d-md-none">sm</div>
+  <div style="color: green;" class="d-none d-md-block d-lg-none">md</div>
+  <div style="color: purple;" class="d-none d-lg-block d-xl-none">lg</div>
+  <div style="color: gold;" class="d-none d-xl-block">xl</div>
+  <div>
+    Font size testing
+  </div>
+</div>
+```
+
+
+
+
 ## video example
 [![Watch the video](http://files.rjwebdesign.cz/i2/20190215-145503.png)](http://files.rjwebdesign.cz/f/20190214-170535.mp4)
