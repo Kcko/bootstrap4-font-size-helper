@@ -23,5 +23,5 @@ Simple mixin which extends boostrap to help you  solve the font size in bootstra
 - ```@include bootstrap-font-size-maker(1, 10, 0.5, '_');```
 - ```@include bootstrap-font-size-maker(1, 10, 0.2, '--', 'px');```
 
-## video sample
-http://files.rjwebdesign.cz/f/20190214-170535.mp4
+## video example
+[![Watch the video](http://files.rjwebdesign.cz/i2/20190215-145503.png)](http://files.rjwebdesign.cz/f/20190214-170535.mp4)
